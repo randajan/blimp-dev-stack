@@ -1,0 +1,46 @@
+.BlimpApp .Wizard {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+
+    --currentSlide: 0;
+    --lastSlide: 0;
+    --slideIndex: 0;
+
+    .slides {
+        position: relative;
+        display: grid;
+
+        > .wizSlide {
+            grid-area: 1 / 1;
+            min-width: 0;
+            min-width: 0;
+            transition: transform 0.25s ease;
+        }
+    }
+
+
+    &.toRight > .slides > .wizSlide {
+        transform: translateX(
+            calc( (var(--slideIndex) - var(--currentSlide)) * 100% )
+        );
+    }
+
+    &.toDown .slides .wizSlide {
+        transform: translateY(
+            calc( (var(--slideIndex) - var(--currentSlide)) * 100% )
+        );
+    }
+
+    &.toLeft > .slides > .wizSlide {
+        transform: translateX(
+            calc( (var(--currentSlide) - var(--slideIndex)) * 100% )
+        );
+    }
+
+    &.toUp > .slides > .wizSlide {
+        transform: translateY(
+            calc((var(--currentSlide) - var(--slideIndex)) * 100%)
+        );
+    }
+}

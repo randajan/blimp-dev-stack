@@ -1,0 +1,14 @@
+.BlimpApp .Tile {
+
+    &.avatar {
+        .Img {
+            height:10vh;
+            border-radius:100%;
+            background-color:white;
+            border:.2em solid var(--cMain);
+        }
+
+    }
+
+    text-align:center;
+}

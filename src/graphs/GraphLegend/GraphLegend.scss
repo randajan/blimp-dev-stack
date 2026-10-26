@@ -1,0 +1,48 @@
+.BlimpApp .GraphLegend {
+    display:flex;
+    gap:.2em;
+    min-width:0;
+
+    &.-vertical {
+        flex-direction:column;
+    }
+
+    &.-horizontal {
+        flex-direction:row;
+        flex-wrap:wrap;
+        gap:.2em .8em;
+        justify-content:space-evenly;
+    }
+
+    .GraphLegend-item {
+        display:flex;
+        align-items:center;
+        gap:.35em;
+        min-width:0;
+        white-space:nowrap;
+    }
+
+    .GraphLegend-swatch {
+        flex:0 0 .65em;
+        height:.65em;
+        width:.65em;
+        background:var(--GraphColor, currentColor);
+        border-radius:.1em;
+        box-shadow:0 0 .28em var(--GraphColor, currentColor);
+    }
+
+    .GraphLegend-label {
+        overflow:hidden;
+        text-overflow:ellipsis;
+    }
+
+    .GraphLegend-value {
+        color:var(--cWhite);
+        font-weight:700;
+    }
+
+    .GraphLegend-percent {
+        color:var(--cWhite50);
+        font-weight:600;
+    }
+}

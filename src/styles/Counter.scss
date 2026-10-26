@@ -1,0 +1,6 @@
+.BlimpApp .Counter {
+    white-space:nowrap;
+    .Digit:nth-last-child(3) {
+        margin-left:.25em;
+    }
+}

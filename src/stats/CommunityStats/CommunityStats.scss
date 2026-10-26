@@ -1,0 +1,21 @@
+.BlimpApp .CommunityStats {
+    .DataView.-table {
+        td {
+            vertical-align: middle;
+        }
+    }
+
+    .BlimpRating {
+        display: inline-block;
+        font-size: .5em;
+    }
+
+    .CharacterCard {
+        .details {
+            font-size:.8em;
+            .value {
+                font-weight: normal;
+            }
+        }
+    }
+}

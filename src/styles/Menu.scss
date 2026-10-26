@@ -1,0 +1,67 @@
+@use "./fn" as *;
+
+.BlimpApp .Menu {
+    position:relative;
+    user-select: none;
+
+    &[data-flags~=flat] {
+        display:flex;
+        align-items:center;
+        flex-wrap:nowrap;
+        flex-direction:row;
+
+        .Link {
+            color:white;
+        }
+    }
+
+    .Trigger {
+        display:flex;
+        width:100%;
+        height:100%;
+        justify-content:center;
+        align-items:center;
+        align-content:center;
+
+        .Img {
+            width:2em;
+            height:2em;
+        }
+    }
+
+    .Pane {
+        position:absolute;
+        z-index:1;
+        right:0;
+        border-bottom-left-radius:.5em;
+        border-bottom-right-radius:.5em;
+        
+        
+        
+        min-width:0;
+
+
+        &.appear, &.enter {
+            .content {
+                transition: margin .5s;
+            }
+        }
+
+        &.exit {
+            .content {
+                transition: margin .5s;
+            }
+        }
+
+        .content {
+            display:flex;
+            flex-direction: column;
+            padding: vhf(1) vwf(1);
+            white-space:nowrap;
+            padding: vwf(1.2) vwf(1.2);
+            font-size:1.25em;
+            border-radius:.2em;
+            background-color: var(--cBlack);
+        }
+    }
+}

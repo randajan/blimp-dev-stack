@@ -1,0 +1,45 @@
+@use "./fn" as *;
+
+.Modal {
+
+
+    &>.cover {
+        z-index: 10;
+    }
+
+    .pops .Pop {
+        background-color: var(--cDarkGray) !important;
+        padding: vhf(1) vhf(1);
+        max-width: min(100%, 1080px);
+        min-width: min(20%, 1080px);
+
+        &>.nav {
+            padding: 0;
+        }
+
+        &>.content {
+            padding: 0 vwf(1) vhf(2);
+
+            .Caption:first-child {
+                margin-top: 0;
+            }
+        }
+
+        &>.nav>.close {
+            font-size: vhf(2.2);
+            line-height: vhf(1.5);
+        }
+
+        &[data-flags~="lock"] {
+            &>.nav {
+                display: none;
+            }
+
+            &>.content {
+                padding: vhf(2) vwf(1) vhf(2);
+            }
+
+        }
+
+    }
+}

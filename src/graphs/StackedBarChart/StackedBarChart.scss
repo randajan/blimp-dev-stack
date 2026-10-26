@@ -1,0 +1,40 @@
+.BlimpApp .StackedBarChart {
+    display:block;
+    max-width:100%;
+
+    &.-legend {
+        display:grid;
+        align-items:stretch;
+        gap:.5em;
+        width:100%;
+    }
+
+    &.-legend-left,
+    &.-legend-right {
+        grid-template-columns:auto 1fr;
+        align-items:center;
+    }
+
+    &.-legend-top,
+    &.-legend-bottom {
+        grid-template-columns:1fr;
+    }
+
+    .StackedBarChart-svg {
+        display:block;
+        width:100%;
+    }
+
+    .StackedBarChart-track {
+        fill:var(--GraphTrackColor, var(--chartTrackColor, var(--cWhite20)));
+        opacity:.72;
+    }
+
+    .StackedBarChart-segment {
+        fill:var(--GraphColor, currentColor);
+        filter:drop-shadow(0 0 .11em var(--GraphColor, currentColor));
+        stroke:var(--cBlack50);
+        stroke-width:.8;
+        transition:filter var(--GraphTransition, 1s), opacity var(--GraphTransition, 1s);
+    }
+}

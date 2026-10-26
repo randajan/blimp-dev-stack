@@ -1,0 +1,17 @@
+.BlimpApp .Table {
+    flex-grow: 1;
+    overflow: hidden;
+
+    td, th {
+        padding:.5vh 1vw;
+    }
+
+    .rows {
+        overflow:auto;
+        flex-grow:1;
+
+        tr:nth-child(2n) {
+            background-color:rgba(64, 64, 64, 0.2);
+        }
+    }
+}

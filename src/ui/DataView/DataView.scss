@@ -1,0 +1,47 @@
+@use "../../styles/fn" as *;
+
+.BlimpApp .DataView {
+    display:flex;
+    flex-direction:column;
+    gap:vhf(.8);
+}
+
+.BlimpApp :where(.DataView, .DataViewSettings) {
+    input, select {
+        min-width:0;
+        padding:vhf(.4) vwf(.6);
+        background:rgba(0, 0, 0, .2);
+        border:1px solid rgba(255, 255, 255, .1);
+        border-radius:.2em;
+        outline:0;
+    }
+
+    select {
+        color-scheme:dark;
+
+        option {
+            color:#ddd;
+            background:var(--cBlack);
+        }
+
+        option:checked {
+            color:#161616;
+            background:var(--cMain);
+        }
+    }
+
+    input:focus, select:focus {
+        border-color:var(--cMain80);
+    }
+
+    button {
+        background:transparent;
+        border:1px solid rgba(255, 255, 255, .1);
+        border-radius:.2em;
+        cursor:pointer;
+    }
+
+    svg {
+        flex:0 0 auto;
+    }
+}

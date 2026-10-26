@@ -1,0 +1,57 @@
+
+@use "./fn" as *;
+
+
+.BlimpApp .Field {
+    text-align:left;
+}
+
+
+
+.BlimpApp button.Button, .Link.-button {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    padding: vhf(1) vwf(1.5);
+    margin: 1vh 1vw;
+    font-weight: bold;
+    border-radius: .2em;
+    background-color: #111;
+    border: 2px solid var(--cMain);
+    user-select:none;
+    box-shadow:
+        0px 0px 1px 1px rgba(0, 0, 0, .6),
+        0px 0px 2px 2px #FFF;
+
+    transition: transform 1s, box-shadow 1s;
+
+    &:hover {
+        background-color: #111 !important;
+        box-shadow:
+            0px 0px 2px 2px rgba(0, 0, 0, .6),
+            0px 0px 5px 5px #fff;
+
+        transition: transform .2s, box-shadow .2s;
+    }
+
+    &[data-flags~="lock"] {
+        color: #ccc;
+        background-color: rgba(0, 0, 0, .1);
+        opacity: .5;
+    }
+
+    text-decoration: none;
+}
+
+
+
+
+
+.BlimpApp .Pane {
+    &.appear, &.enter, &.exit { 
+        .content {
+            transition: .5s;
+        }
+    }
+
+}

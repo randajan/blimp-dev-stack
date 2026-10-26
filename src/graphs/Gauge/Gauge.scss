@@ -1,0 +1,24 @@
+.BlimpApp .Gauge {
+    display:block;
+    max-width:100%;
+    overflow:visible;
+
+    .Gauge-track {
+        fill:var(--GraphTrackColor, var(--chartTrackColor, var(--cWhite20)));
+        opacity:.72;
+    }
+
+    .Gauge-value {
+        fill:var(--GraphActiveColor, var(--chartColor1, var(--cMain)));
+        filter:drop-shadow(0 0 .16em var(--GraphActiveColor, var(--chartColor1, var(--cMain))));
+        transition:filter var(--GraphTransition, 1s), opacity var(--GraphTransition, 1s);
+    }
+
+    .Gauge-label {
+        fill:var(--GraphLabelColor, var(--cWhite));
+        font-size:1.35em;
+        font-weight:700;
+        line-height:1;
+        pointer-events:none;
+    }
+}

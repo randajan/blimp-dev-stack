@@ -1,0 +1,20 @@
+.BlimpApp .Bar {
+
+    &:not([data-flags~=marker]) {
+        border: 2px solid var(--cMain);
+        box-shadow: 0px 0px 1px 1px rgba(0, 0, 0, .6),
+            0px 0px 2px 2px #FFF;
+
+        .unmark {
+            background-color: #111;
+        }
+
+        .mark {
+            background-color: var(--cMain);
+        }
+    }
+    
+    .caption {
+        color: white;
+    }
+}

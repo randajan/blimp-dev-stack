@@ -1,0 +1,11 @@
+@use "sass:math";
+
+@function vhf($n) { // 1:4
+  $v: math.div($n, 3);
+  @return calc(#{$v}em + #{$n}vh);
+}
+
+@function vwf($n) { // 1:4
+  $v: math.div($n, 3);
+  @return calc(#{$v}em + #{$n}vw);
+}

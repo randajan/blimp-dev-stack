@@ -1,0 +1,84 @@
+@use "../../styles/fn" as *;
+
+#root[data-screen~="780w"]:not([data-screen~="960w"]) .BlimpApp .StatsPanel {
+
+    .statsRow.grid3Cols {
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+            "c a"
+            "d b";
+    }
+}
+
+#root[data-screen~="600w"]:not([data-screen~="780w"]) .BlimpApp .StatsPanel {
+
+    .statsRow.grid2Cols {
+        grid-template-columns: 1fr;
+    }
+
+    .statsRow.grid3Cols {
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+            "a a"
+            "c c"
+            "d b";
+    }
+}
+
+#root:not([data-screen~="600w"]) .BlimpApp .StatsPanel {
+
+    .statsRow {
+        grid-template-columns: 1fr;
+    }
+
+    .statsRow.grid3Cols {
+        grid-template-areas:"a" "b" "c" "d";
+    }
+
+}
+
+.BlimpApp .StatsPanel {
+    position: relative;
+    border-color: var(--cMain80);
+
+    > .flex {
+        padding: vhf(.8) vwf(.8);
+        gap: vhf(.8) vwf(.8);
+    }
+
+
+    .statsRow {
+        position: relative;
+        display: grid;
+        gap: vhf(.8) vwf(.8);
+        justify-content: stretch;
+
+        &.grid1Col {
+            grid-template-columns: 1fr;
+        }
+
+        &.grid3Cols {
+            grid-template-columns: 1fr minmax(40%, auto) 1fr;
+            grid-template-areas:
+                "d a b"
+                "d c b";
+
+            >*:nth-child(1) { grid-area: a; }
+            >*:nth-child(2) { grid-area: b; }
+            >*:nth-child(3) { grid-area: c; }
+            >*:nth-child(4) { grid-area: d; }
+        }
+
+        &.grid2Cols {
+            grid-template-columns: 1fr 1fr;
+        }
+
+        >* {
+            position: relative;
+            min-width: 0;
+            padding: vhf(.8) vwf(.8);
+            border: 1px solid var(--cMain80);
+        }
+    }
+
+}

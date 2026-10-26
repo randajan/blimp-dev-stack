@@ -1,0 +1,50 @@
+@use "../../../styles/fn" as *;
+
+.BlimpApp .DataView {
+    .DataViewTable {
+        max-width:100%;
+        border:1px solid rgba(255, 255, 255, .1);
+        border-radius:.2em;
+
+        table {
+            width:100%;
+            max-width:100%;
+            table-layout:auto;
+            border-collapse:collapse;
+        }
+
+        th, td {
+            padding:vhf(.4) vwf(.6);
+            text-align:left;
+            overflow-wrap:break-word;
+            border-bottom:1px solid rgba(255, 255, 255, .1);
+        }
+
+        th {
+            font-weight:600;
+            user-select:none;
+
+            .DataViewColumnTrigger span {
+                text-overflow:clip;
+                white-space:normal;
+            }
+        }
+
+        .empty td {
+            padding:vhf(1) vwf(1);
+            text-align:center;
+            opacity:.8;
+        }
+
+        .DataViewVirtualPlaceholder {
+            padding:0;
+            border-bottom:0;
+        }
+
+        @media (max-width: 680px) {
+            th, td {
+                padding:vhf(.4) vwf(.4);
+            }
+        }
+    }
+}

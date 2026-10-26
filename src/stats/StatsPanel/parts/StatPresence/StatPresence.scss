@@ -1,0 +1,48 @@
+@use "../../../../styles/fn" as *;
+
+.BlimpApp .StatPresence {
+    display:grid;
+    gap:vhf(.75);
+
+    .presenceItems {
+        display:grid;
+        grid-template-columns:1fr 1fr;
+        gap:vwf(.8);
+    }
+
+    .presenceItem {
+        display:grid;
+        grid-template-columns:auto 1fr;
+        align-items:center;
+        gap:vhf(.2) vwf(.55);
+        min-width:0;
+    }
+
+    .presenceIcon {
+        grid-row:1 / span 2;
+        width:1.7em;
+        height:1.7em;
+        color:var(--cMain);
+        fill:currentColor;
+    }
+
+    .presenceLabel {
+        color:var(--cMain);
+        font-weight:800;
+        line-height:1.1;
+        text-transform:uppercase;
+    }
+
+    .Timer {
+        min-width:0;
+        color:var(--cWhite);
+        font-weight:700;
+    }
+
+    .targetDate {
+        margin:0;
+        color:var(--cWhite50);
+        font-size:.8em;
+        font-weight:400;
+    }
+}

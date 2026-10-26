@@ -1,0 +1,10 @@
+.BlimpApp .Img {
+    &[data-transition~="true"] {
+        transition: opacity 1s;
+
+        &[data-status~="pending"] {
+            opacity: 0;
+        }
+    }
+
+}

@@ -1,0 +1,80 @@
+.BlimpApp .BalanceChart {
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    gap:.45em;
+    width:var(--BalanceChartWidth, auto);
+    height:var(--BalanceChartHeight, auto);
+    max-width:100%;
+    overflow:visible;
+
+    .BalanceChart-title {
+        color:var(--cMain);
+        font-weight:700;
+        line-height:1;
+        text-transform:uppercase;
+        white-space:nowrap;
+    }
+
+    .BalanceChart-stage {
+        display:grid;
+        grid-template-areas:"graph";
+        align-items:start;
+        justify-items:center;
+        width:50%;
+        min-height:4.2em;
+        padding-top:2em;
+    }
+
+    .BalanceChart-beam {
+        grid-area:graph;
+        width:100%;
+        transform:rotate(var(--BalanceAngle, 0deg));
+        transform-origin:50% 50%;
+        transition:transform var(--GraphTransition, 1s);
+    }
+
+    .BalanceChart-bar {
+        width:100%;
+    }
+
+    .BalanceChart-pivot {
+        grid-area:graph;
+        margin-top:6px;
+    }
+
+    .BalanceChart-sides {
+        display:flex;
+        justify-content:space-evenly;
+        width:82%;
+    }
+
+    .BalanceChart-side {
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        gap:.25em;
+        line-height:1;
+        text-align:center;
+        white-space:nowrap;
+    }
+
+    .BalanceChart-side.-left {
+        color:var(--BalanceLeftColor, var(--cMain));
+    }
+
+    .BalanceChart-side.-right {
+        color:var(--BalanceRightColor, var(--cBlue));
+    }
+
+    .BalanceChart-label {
+        font-size:.75em;
+        font-weight:600;
+    }
+
+    .BalanceChart-value {
+        font-size:1.5em;
+        font-weight:700;
+    }
+}

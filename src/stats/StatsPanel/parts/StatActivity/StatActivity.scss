@@ -1,0 +1,39 @@
+@use "../../../../styles/fn" as *;
+
+.BlimpApp .StatActivity {
+    display:grid;
+    gap:vhf(.8);
+
+    .activityItems {
+        display:grid;
+        grid-template-columns:1fr 1fr;
+        align-items:stretch;
+    }
+
+    .activityItem {
+        display:grid;
+        align-content:center;
+        gap:vhf(.25);
+        justify-items:center;
+        min-width:0;
+        text-align:center;
+    }
+
+    .activityIcon {
+        width:1.9em;
+        height:1.9em;
+        color:var(--cMain);
+        fill:currentColor;
+    }
+
+    .activityLabel {
+        color:var(--cWhite80);
+        font-size:.9em;
+    }
+
+    .activityValue {
+        color:var(--cWhite);
+        font-size:1.15em;
+        font-weight:700;
+    }
+}

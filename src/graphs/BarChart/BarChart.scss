@@ -1,0 +1,48 @@
+.BlimpApp .BarChart {
+    display:block;
+    max-width:100%;
+
+    &.-layout {
+        display:grid;
+        gap:.35em;
+        width:100%;
+    }
+
+    .BarChart-head {
+        display:flex;
+        align-items:flex-end;
+        justify-content:space-between;
+        gap:.5em;
+    }
+
+    .BarChart-foot {
+        display:flex;
+        align-items:flex-start;
+        justify-content:space-between;
+        gap:.5em;
+        width:100%;
+    }
+
+    .BarChart-label {
+        margin-left:auto;
+        white-space:nowrap;
+    }
+
+    .BarChart-svg {
+        display:block;
+        width:100%;
+    }
+
+    .Ratio {
+        justify-self:start;
+    }
+
+    .BarChart-track {
+        fill:var(--GraphTrackColor, var(--chartTrackColor, var(--cWhite20)));
+        opacity:.72;
+    }
+
+    .BarChart-value {
+        fill:var(--GraphActiveColor, var(--chartColor1, var(--cMain)));
+    }
+}

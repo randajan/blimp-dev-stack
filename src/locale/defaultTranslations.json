@@ -1,0 +1,22 @@
+{
+    "localeFormCaption":["Edit language", "Upravit jazyk"],
+    "localeFormSectionLanguage":["Language", "Jazyk"],
+    "localeFormActionTemporary":["Change temporarily", "Změnit dočasně"],
+    "localeFormActionPermanent":["Change permanently", "Změnit trvale"],
+    "localeFormActionSaving":["Saving", "Ukládám"],
+    "localeFormErrorSubmit":["Language could not be changed. Please try again.", "Jazyk se nepodařilo změnit. Zkuste to prosím znovu."],
+    "localeFormErrorValidation":["Please check the language selection.", "Zkontrolujte výběr jazyka."],
+    "localeFormOptionEn":["English", "English"],
+    "localeFormOptionCs":["Čeština", "Čeština"],
+    "localeFormValidationRequired":["Select a language.", "Vyberte jazyk."],
+    "localeFormValidationInvalidFormat":["Language is not in a valid format.", "Jazyk není ve správném formátu."],
+    "localeFormValidationInvalidType":["Language has an invalid type.", "Jazyk má neplatný typ."],
+    "localeFormValidationUnsupported":["This language is not supported.", "Tento jazyk není podporovaný."],
+    "localeFormValidationInvalid":["Selected language cannot be used.", "Vybraný jazyk není možné použít."],
+    "unitYears":["{#} year[|s]", "{#} [roku|rok|roky|let]"],
+    "unitMonths":["{#} month[|s]", "{#} měsíc[e||e|ů]"],
+    "unitDays":["{#} day[|s]", "{#} d[ne|en|ny|ní]"],
+    "unitHours":["{#} hour[|s]", "{#} hodin[y|a|y|]"],
+    "unitMinutes":["{#} minute[|s]", "{#} minut[y|a|y|]"],
+    "unitSeconds":["{#} second[|s]", "{#} sekund[y|a|y|]"]
+}

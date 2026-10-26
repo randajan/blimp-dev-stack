@@ -1,0 +1,100 @@
+@use "../../../styles/fn" as *;
+
+.BlimpApp .DataView {
+    .DataViewHead-toolbar {
+        display:flex;
+        align-items:center;
+        flex-wrap:wrap;
+        gap:vhf(.4) vwf(.4);
+    }
+
+    .DataViewSearch {
+        display:flex;
+        align-items:center;
+        gap:vwf(.4);
+        flex:1 1 16em;
+        height:2.4em;
+        min-width:0;
+        padding:0 vwf(.6);
+        background:rgba(0, 0, 0, .2);
+        border:1px solid rgba(255, 255, 255, .1);
+        border-radius:.2em;
+
+        &:focus-within {
+            border-color:var(--cMain80);
+        }
+
+        svg {
+            color:var(--cWhite50);
+        }
+
+        input {
+            flex:1 1 auto;
+            padding:0;
+            background:transparent;
+            border:0;
+        }
+    }
+
+    .DataViewSwitch {
+        display:inline-grid;
+        grid-auto-flow:column;
+        overflow:hidden;
+        user-select:none;
+        border:1px solid rgba(255, 255, 255, .1);
+        border-radius:.2em;
+
+        button {
+            display:inline-flex;
+            align-items:center;
+            justify-content:center;
+            width:3em;
+            min-height:2.4em;
+            border:0;
+            border-radius:0;
+        }
+
+        button.-active {
+            color:var(--cMain);
+            background:var(--cMain20);
+        }
+
+        button + button {
+            border-left:1px solid rgba(255, 255, 255, .1);
+        }
+    }
+
+    .DataViewFilterTrigger {
+        position:relative;
+        display:inline-flex;
+        align-items:center;
+        justify-content:center;
+        width:3em;
+        min-height:2.4em;
+        color:var(--cWhite50);
+        user-select:none;
+
+        &.-active {
+            color:var(--cMain);
+            background:var(--cMain20);
+            border-color:var(--cMain50);
+        }
+
+        span {
+            position:absolute;
+            top:-.35em;
+            right:-.35em;
+            display:flex;
+            align-items:center;
+            justify-content:center;
+            min-width:1.4em;
+            height:1.4em;
+            padding:0 .3em;
+            color:#161616;
+            font-size:.7em;
+            font-weight:800;
+            background:var(--cMain);
+            border-radius:1em;
+        }
+    }
+}

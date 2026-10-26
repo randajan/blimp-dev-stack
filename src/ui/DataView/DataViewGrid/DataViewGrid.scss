@@ -1,0 +1,55 @@
+@use "../../../styles/fn" as *;
+
+.BlimpApp .DataView {
+    .DataViewGrid {
+        display:grid;
+        gap:vhf(.8);
+    }
+
+    .DataViewGrid-cards {
+        display:grid;
+        grid-template-columns:repeat(auto-fill, minmax(min(18em, 100%), 1fr));
+        gap:vhf(.8) vwf(.8);
+    }
+
+    .DataViewCard {
+        display:grid;
+        box-sizing:border-box;
+        gap:vhf(.6);
+        min-width:0;
+        padding:vhf(.8) vwf(.8);
+        background:var(--cBlack50);
+        border:1px solid rgba(255, 255, 255, .1);
+        border-radius:.2em;
+
+        &.-placeholder {
+            visibility:hidden;
+            overflow:hidden;
+        }
+    }
+
+    .DataViewCard-field {
+        display:grid;
+        gap:vhf(.2);
+        min-width:0;
+    }
+
+    .DataViewCard-label {
+        color:var(--cWhite50);
+        font-size:.8em;
+        text-transform:uppercase;
+        user-select:none;
+    }
+
+    .DataViewCard-value {
+        overflow-wrap:anywhere;
+    }
+
+    .DataViewEmpty {
+        grid-column:1 / -1;
+        padding:vhf(1) vwf(1);
+        text-align:center;
+        opacity:.8;
+    }
+
+}

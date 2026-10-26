@@ -1,0 +1,46 @@
+.BlimpApp .PieChart {
+    display:block;
+    max-width:100%;
+    overflow:visible;
+
+    .PieChart-svg {
+        display:block;
+    }
+
+    &:not(.-legend) {
+        .PieChart-svg {
+            height:100%;
+            width:100%;
+        }
+    }
+
+    &.-legend {
+        display:inline-grid;
+        align-items:center;
+        gap:.5em;
+    }
+
+    &.-legend-left,
+    &.-legend-right {
+        grid-template-columns:auto 1fr;
+    }
+
+    &.-legend-top,
+    &.-legend-bottom {
+        grid-template-columns:1fr;
+        justify-items:center;
+    }
+
+    .PieChart-segment {
+        fill:var(--GraphColor, currentColor);
+        filter:drop-shadow(0 0 .13em var(--GraphColor, currentColor));
+        stroke:var(--cBlack50);
+        stroke-width:.8;
+        transition:filter var(--GraphTransition, 1s), opacity var(--GraphTransition, 1s);
+    }
+
+    .PieChart-track {
+        fill:var(--GraphTrackColor, var(--chartTrackColor, var(--cWhite20)));
+        opacity:.7;
+    }
+}

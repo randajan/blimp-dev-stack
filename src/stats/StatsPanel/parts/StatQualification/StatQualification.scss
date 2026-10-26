@@ -1,0 +1,25 @@
+@use "../../../../styles/fn" as *;
+
+.BlimpApp .StatQualification {
+    .BarChart.-layout {
+        gap:vhf(.55);
+    }
+
+    .BarChart-label {
+        color:var(--cWhite);
+        font-family:"Orbitron", "Tektur", sans-serif;
+        font-size:1.6em;
+        font-weight:700;
+        line-height:1;
+    }
+
+    .BarChart-svg {
+        height:.9em;
+    }
+
+    .Ratio {
+        color:var(--cWhite);
+        font-size:1.05em;
+        font-weight:700;
+    }
+}

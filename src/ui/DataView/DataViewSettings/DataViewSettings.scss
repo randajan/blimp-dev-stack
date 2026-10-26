@@ -1,0 +1,38 @@
+@use "../../../styles/fn" as *;
+
+.BlimpApp .DataViewSettings {
+    display:flex;
+    flex-direction:column;
+    gap:vhf(.6);
+    width:min(40em, 80vw);
+    max-width:100%;
+
+    .DataViewSettings-controls {
+        columns:2 16em;
+        column-gap:vwf(.6);
+
+        .DataViewColumnControl {
+            width:100%;
+            margin-bottom:vhf(.6);
+            break-inside:avoid;
+        }
+
+        .DataViewFilterInput.checks {
+            grid-template-columns:repeat(auto-fit, minmax(min(7em, 100%), 1fr));
+            gap:vhf(.2) vwf(.4);
+        }
+    }
+
+    .DataViewSettings-actions {
+        display:flex;
+        justify-content:flex-end;
+    }
+
+    @media (max-width: 680px) {
+        width:min(22em, 80vw);
+
+        .DataViewSettings-controls {
+            columns:1;
+        }
+    }
+}

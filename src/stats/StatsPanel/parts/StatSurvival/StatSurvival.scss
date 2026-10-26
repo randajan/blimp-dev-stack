@@ -1,0 +1,15 @@
+@use "../../../../styles/fn" as *;
+
+.BlimpApp .StatSurvival {
+    display:grid;
+    align-content:start;
+    gap:vhf(.7) vwf(.8);
+
+    .survivalGraph {
+        justify-self:center;
+    }
+
+    .GraphLegend {
+        font-size:.95em;
+    }
+}

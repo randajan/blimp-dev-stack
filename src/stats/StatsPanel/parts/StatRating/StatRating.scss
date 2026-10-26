@@ -1,0 +1,12 @@
+.BlimpApp .StatRating {
+
+    display:flex;
+    flex-direction: column;
+    align-items:center;
+    justify-content: center;
+
+    .Bar {
+        position:relative;
+    }
+
+}

@@ -1,0 +1,33 @@
+.BlimpApp .BlimpRating {
+
+    &:not(.inview) {
+        .ImgStore {
+            opacity: 0;
+            transform: scale(0);
+        }
+    }
+
+    &.inview {
+        .ImgStore {
+            opacity: 1;
+            transform: scale(1);
+        }
+    }
+
+    .mark {
+        svg {
+            fill: var(--cMain);
+        }
+    }
+
+    .unmark {
+        filter: none;
+
+        svg {
+            fill: var(--cBlack);
+            filter: drop-shadow(0 0 .05em var(--cMain));
+
+        }
+    }
+
+}

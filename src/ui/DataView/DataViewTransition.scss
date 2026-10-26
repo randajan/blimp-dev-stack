@@ -1,0 +1,57 @@
+.BlimpApp .DataView {
+    .DataViewCard {
+        opacity:0;
+
+        &.DataViewVirtual-enter-done,
+        &.DataViewVirtual-enter-active,
+        &.DataViewVirtual-appear-active {
+            opacity:1;
+            transform:none;
+        }
+
+        &.DataViewVirtual-exit-active {
+            opacity:0;
+        }
+
+        &.DataViewVirtual-enter {
+            transition:
+                opacity var(--DataViewTransition) ease-out,
+                transform var(--DataViewTransition) ease-out;
+        }
+
+        &.DataViewVirtual-exit {
+            transition:
+                opacity var(--DataViewTransition) ease-in,
+                transform var(--DataViewTransition) ease-in;
+        }
+    }
+
+    .DataViewTable tr {
+        &.DataViewVirtual-appear > td,
+        &.DataViewVirtual-enter > td {
+            opacity:0;
+        }
+
+        &.DataViewVirtual-enter-done > td,
+        &.DataViewVirtual-enter-active > td,
+        &.DataViewVirtual-appear-active > td {
+            opacity:1;
+        }
+
+        &.DataViewVirtual-exit-active > td {
+            opacity:0;
+        }
+
+        &.DataViewVirtual-enter > td {
+            transition:
+                opacity var(--DataViewTransition) ease-out,
+                transform var(--DataViewTransition) ease-out;
+        }
+
+        &.DataViewVirtual-exit > td {
+            transition:
+                opacity var(--DataViewTransition) ease-in,
+                transform var(--DataViewTransition) ease-in;
+        }
+    }
+}

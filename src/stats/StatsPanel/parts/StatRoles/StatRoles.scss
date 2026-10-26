@@ -1,0 +1,20 @@
+@use "../../../../styles/fn" as *;
+
+.BlimpApp .StatRoles {
+    display:grid;
+    grid-template-rows: auto 1fr;
+
+    .Caption {
+        justify-self:start;
+    }
+
+    .rolesGraph {
+        align-self:center;
+        justify-self:center;
+    }
+
+    .GraphLegend {
+        font-size:1em;
+    }
+
+}

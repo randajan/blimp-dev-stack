@@ -1,0 +1,8 @@
+
+
+.BlimpApp .currencyCZK {
+    &::after {
+        content:"Kč";
+        margin-left:.5em;
+    }
+}

@@ -1,0 +1,67 @@
+@use "../../../../styles/fn" as *;
+
+.BlimpApp .StatRankDetail {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+
+    .flex {
+        flex-grow:1;
+        align-items: center;
+        justify-content: center;
+        gap: vhf(.65);
+        text-align: center;
+    }
+
+    .rankGradeSymbol {
+        position: absolute;
+        inset: 50% auto auto 50%;
+        width: 120%;
+        min-width: 18em;
+        max-width: none;
+        aspect-ratio: 1;
+        color: var(--cMain);
+        opacity: .08;
+        pointer-events: none;
+        transform: translate(-50%, -50%);
+    }
+
+    .rankGrade .order {
+        color:var(--cMain);
+        font-size:.8em;
+    }
+
+    .rankGradeSymbol svg {
+        fill: currentColor;
+    }
+
+
+    .rankScore {
+        display: flex;
+        align-items: baseline;
+        gap: vwf(.45);
+    }
+
+    .rankValue {
+        color: var(--cWhite);
+        font-family: "Orbitron", "Tektur", sans-serif;
+        font-size: 4em;
+        font-weight: 800;
+        line-height: 1;
+    }
+
+
+    .rankGrade {
+        width: 100%;
+        max-width: 100%;
+        padding-top: vhf(.65);
+        border-top: 1px solid var(--cMain50);
+        color: var(--cWhite);
+        font-size: 1.4em;
+        font-weight: 600;
+        overflow-wrap: anywhere;
+    }
+
+}
