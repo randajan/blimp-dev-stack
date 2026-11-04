@@ -1,25 +1,13 @@
 import sapp, { argv } from "@randajan/simple-lib";
-import { sassPlugin } from "esbuild-sass-plugin";
-
-
-const toStyleModule = css=>{
-    const source = JSON.stringify(css);
-    return `
-        if (typeof document !== "undefined") {
-            const style = document.createElement("style");
-            style.textContent = ${source};
-            document.head.appendChild(style);
-        }
-        export default ${source};
-    `;
-};
+import { sassPlugin } from "./src/build/index.js";
 
 sapp(argv.isBuild, {
     mode:"web",
-    plugins:[sassPlugin({ type:toStyleModule })],
+    plugins:[sassPlugin()],
     lib:{
         entries:[
             "index.js",
+            "build/index.js",
             "ui/index.js",
             "graphs/index.js",
             "stats/index.js",

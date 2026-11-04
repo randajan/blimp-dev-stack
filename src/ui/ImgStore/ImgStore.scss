@@ -5,13 +5,12 @@
     overflow:hidden;
 
     > .Img.placeholder {
+        pointer-events:none;
         transition: opacity 1s;
     }
 
     &[data-status~="loaded"] {
         > .Img.placeholder {
-            position:absolute;
-            top:0;
             opacity:0;
         }
     }
@@ -24,6 +23,11 @@
         &:not(.placeholder) {
             opacity:1;
         }
+    }
+
+    > .Img.placeholder + .Img {
+        position:absolute;
+        inset:0;
     }
 
     > .Img svg {

@@ -10,6 +10,10 @@
       "import": "./dist/esm/index.mjs",
       "require": "./dist/cjs/index.cjs"
     },
+    "./build": {
+      "import": "./dist/esm/build/index.mjs",
+      "require": "./dist/cjs/build/index.cjs"
+    },
     "./ui": {
       "import": "./dist/esm/ui/index.mjs",
       "require": "./dist/cjs/ui/index.cjs"
@@ -38,6 +42,11 @@
       "import": "./dist/esm/styles/index.mjs",
       "require": "./dist/cjs/styles/index.cjs"
     },
+    "./components.css": "./dist/esm/index.css",
+    "./ui.css": "./dist/esm/ui/index.css",
+    "./graphs.css": "./dist/esm/graphs/index.css",
+    "./stats.css": "./dist/esm/stats/index.css",
+    "./styles.css": "./dist/esm/styles/index.css",
     "./styles/fn": "./src/styles/_fn.scss",
     "./package.json": "./package.json"
   },
@@ -80,8 +89,9 @@
     "email": "jnranda@gmail.com",
     "url": "https://www.linkedin.com/in/randajan/"
   },
-  "license": "MIT",
+  "license": "UNLICENSED",
   "devDependencies": {
+    "@randajan/postcss-extra-units": "^1.0.2",
     "@randajan/simple-lib": "^5.0.1",
     "esbuild-sass-plugin": "^3.3.1",
     "sass": "^1.89.2"

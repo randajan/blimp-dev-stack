@@ -1,4 +1,4 @@
-.BlimpApp .Wizard {
+.App .Wizard {
     position: relative;
     width: 100%;
     overflow: hidden;
@@ -15,6 +15,7 @@
             grid-area: 1 / 1;
             min-width: 0;
             min-width: 0;
+            padding:.5vhf .5vwf;
             transition: transform 0.25s ease;
         }
     }
@@ -22,7 +23,7 @@
 
     &.toRight > .slides > .wizSlide {
         transform: translateX(
-            calc( (var(--slideIndex) - var(--currentSlide)) * 100% )
+            calc( (var(--slideIndex) - var(--currentSlide)) * 100%)
         );
     }
 

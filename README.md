@@ -24,10 +24,21 @@ import { DataView, StatsPanel, collectGameStats } from "@randajan/blimp-dev-stac
 
 ## Styly
 
-Styly komponent jsou součástí jejich JavaScriptového buildu a načtou se spolu s komponentou. Globální Blimp vzhled, proměnné a základní pravidla se zapnou jedním samostatným importem:
+Styly se nevkládají automaticky přes JavaScript. Hostitelská aplikace je importuje explicitně.
+
+Pro celý balík komponent a globální Blimp vzhled:
 
 ```js
-import "@randajan/blimp-dev-stack/styles";
+import "@randajan/blimp-dev-stack/components.css";
+import "@randajan/blimp-dev-stack/styles.css";
+```
+
+Pokud aplikace používá jen část knihovny, může místo `components.css` načíst užší výstup:
+
+```js
+import "@randajan/blimp-dev-stack/ui.css";     // UI komponenty
+// nebo "@randajan/blimp-dev-stack/graphs.css" // grafy
+// nebo "@randajan/blimp-dev-stack/stats.css"  // statistiky včetně jejich závislostí
 ```
 
 Samotné SCSS funkce a mixiny:
